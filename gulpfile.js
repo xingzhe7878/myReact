@@ -15,7 +15,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('style', function(){
-	return gulp.src(src.style)
+	return gulp.src('less/*.less')
 		.pipe(plumber())
 		.pipe(less())
 		.on('error', handleError)
@@ -24,7 +24,7 @@ gulp.task('style', function(){
 		}))
 		.pipe(concat('combine.min.css'))
 		.pipe(cssmin())
-		.pipe(gulp.dest(dist.style));
+		.pipe(gulp.dest('dist/style/'));
 });
 
 
@@ -38,15 +38,13 @@ gulp.task('webpackDev', function(){
 });
 
 gulp.task('watch', function(){
-//	gulp.watch(src.js, ['webpackDev'])
-//	gulp.watch('./index.js', ['webpackDev'])
-//	gulp.watch(src.style, ['style'])
-	gulp.watch('myReact/**/*.js', ['webpackDev'])
-	gulp.watch('index.js', ['webpackDev'])
+	gulp.watch('myReact/**/*.js', ['webpackDev']);
+	gulp.watch('index.js', ['webpackDev']);
+	gulp.watch('less/*.less', ['style']);
 })
 
 gulp.task('default', ['clean'], function(){
-	return gulp.start(['webpackDev', 'watch']);
+	return gulp.start(['style', 'webpackDev', 'watch']);
 });
 
 function handleError(err) {

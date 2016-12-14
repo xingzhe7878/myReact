@@ -5,8 +5,28 @@ import { Button, Breadcrumb } from './myReact'
 let App = React.createClass({
 	render() {
 		return <div>
-			<Button></Button>
-			<Breadcrumb></Breadcrumb>
+			<div className="col">
+				<Button type="primary">Primary</Button>
+			    <Button>Default</Button>
+			    <Button type="ghost">Ghost</Button>
+			    <Button type="dashed">Dashed</Button>
+			    <Button type="disable">Disable</Button>
+			</div>
+			<div className="col">
+				<Breadcrumb>
+				    <Breadcrumb.Item>Home</Breadcrumb.Item>
+				    <Breadcrumb.Item><a href="">Application Center</a></Breadcrumb.Item>
+				    <Breadcrumb.Item><a href="">Application List</a></Breadcrumb.Item>
+				    <Breadcrumb.Item>An Application</Breadcrumb.Item>
+				</Breadcrumb>
+				
+				<Breadcrumb separator=">">
+				    <Breadcrumb.Item>Home</Breadcrumb.Item>
+				    <Breadcrumb.Item><a href="">Application Center</a></Breadcrumb.Item>
+				    <Breadcrumb.Item><a href="">Application List</a></Breadcrumb.Item>
+				    <Breadcrumb.Item>An Application</Breadcrumb.Item>
+				</Breadcrumb>
+			</div>
 		</div>
 	}
 })
