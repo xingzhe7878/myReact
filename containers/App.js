@@ -9,12 +9,12 @@ class App extends React.Component {
 		}
 	}
 	
-	stepNext(event) {
-		this.setState({current: this.state.current +1});
+	stepNext() {
+		this.setState({current: (this.state.current +1)});
 	}
 	
-	stepPrev(event) {
-		this.setState({current: this.state.current -1});
+	stepPrev() {
+		this.setState({current: (this.state.current -1)});
 	}
 	
 	onChangesome(params) {
@@ -62,12 +62,12 @@ class App extends React.Component {
 				{
 					this.state.current < 2
 					&&
-					<Button type="primary" onClick={this.stepNext}>next</Button>
+					<Button type="primary" onClick={this.stepNext.bind(this)}>next</Button>
 				}
 				{
 					this.state.current > 0
 					&&
-					<Button onClick={this.stepPrev}>prev</Button>
+					<Button onClick={this.stepPrev.bind(this)}>prev</Button>
 				}
 			</div>
 			
@@ -82,7 +82,7 @@ class App extends React.Component {
 			<div className="col">
 				{/* onChangesome可以是任何函数，返回第一个参数为组件当前状态 */}
 				<Pagination defaultCurrent={1} total={50} onChange={this.onChangesome} style={{"marginBottom":"10px"}}/>
-				<Pagination defaultCurrent={1} total={150} />
+				<Pagination defaultCurrent={1} total={150}  />
 			</div>
 			
 		</div>

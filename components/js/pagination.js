@@ -29,8 +29,12 @@ class Pagination extends React.Component{
 	}
 	
 	componentDidUpdate() {
+		let onChange = this.props.onChange;
         this.resetHandler();
-        this.props.onChange(this.state);
+        if(!onChange) {
+			return;
+        }
+        onChange(this.state);
     }
 	
 	renderPageNumber(page, i, current) {
