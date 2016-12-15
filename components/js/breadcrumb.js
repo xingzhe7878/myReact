@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 
 class Breadcrumb extends React.Component{
 	constructor(props) {

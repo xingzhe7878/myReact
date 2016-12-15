@@ -1,5 +1,5 @@
-import React from 'React'
-import { Button, Breadcrumb, Steps, Tabs } from '../components'
+import React from 'react'
+import { Button, Breadcrumb, Steps, Tabs, Pagination } from '../components'
 
 class App extends React.Component {
 	constructor(props) {
@@ -15,6 +15,10 @@ class App extends React.Component {
 	
 	stepPrev(event) {
 		this.setState({current: this.state.current -1});
+	}
+	
+	onChangesome(params) {
+		console.log(params)
 	}
 	
 	render() {
@@ -73,6 +77,12 @@ class App extends React.Component {
 				    <Tabs.TabPane tab="Tab 2" key="2">Content of Tab Pane 2</Tabs.TabPane>
 				    <Tabs.TabPane tab="Tab 3" key="3">Content of Tab Pane 3</Tabs.TabPane>
 				</Tabs>
+			</div>
+			
+			<div className="col">
+				{/* onChangesome可以是任何函数，返回第一个参数为组件当前状态 */}
+				<Pagination defaultCurrent={1} total={50} onChange={this.onChangesome} style={{"marginBottom":"10px"}}/>
+				<Pagination defaultCurrent={1} total={150} />
 			</div>
 			
 		</div>

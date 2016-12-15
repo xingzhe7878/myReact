@@ -1,5 +1,5 @@
-import React from 'React'
-import ReactDOM from 'React-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 import App from './containers/App'
 
 ReactDOM.render(
