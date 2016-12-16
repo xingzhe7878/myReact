@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 class Pagination extends React.Component{
 	constructor(props) {
 		super(props);
-		console.log(this.props)
 		this.state={
 			defaultCurrent: this.props.defaultCurrent || 1,
 			total: this.props.total,
