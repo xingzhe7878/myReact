@@ -15,4 +15,4 @@ class Button extends React.Component{
 	}
 }
 
-export default Button
+export default Button;
