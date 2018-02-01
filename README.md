@@ -1,6 +1,4 @@
-### myReact 组件
-
-### 构建工具是 gulp + webpack + react
+### react 开发环境配置
 
 #### 启动(在这之前要安装node、gulp)
 
