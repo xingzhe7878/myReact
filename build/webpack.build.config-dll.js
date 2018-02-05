@@ -4,7 +4,10 @@ var path = require('path');
 
 var vendors = [
     'react',
-    'react-dom'
+    'react-dom',
+    'redux',
+    'react-router'
+
 ];
 
 //强制删除文件
