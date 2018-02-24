@@ -31,16 +31,18 @@ class App extends Module {
         let state = this.state;
         return (
             <Layout style={{"minHeight":state.autoHeight}}>
-                <Header>Header</Header>
+                <Header style={{"backgroundColor": "#3089DC"}}>
+                    管理系统
+                </Header>
                 <Layout>
-                    <Sider>
+                    <Sider style={{"backgroundColor": "#fff"}}>
                         <LeftMenu/>
                     </Sider>
                     <Content>
                         {this.props.children}
                     </Content>
                 </Layout>
-                <Footer>Footer</Footer>
+                <Footer style={{"backgroundColor": "#fff"}}>Footer</Footer>
             </Layout>
 
         )

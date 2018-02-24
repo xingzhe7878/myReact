@@ -40,6 +40,11 @@ class LeftMenu extends Module {
                         <NavLink to="/SearchSend">赠送查询</NavLink>
                     </MenuItem>
                 </SubMenu>
+                <SubMenu key="DHTWO" title={<span><span>导航二</span></span>}>
+                    <MenuItem>
+                        <NavLink to="/ZDH">子导航1</NavLink>
+                    </MenuItem>
+                </SubMenu>
             </Menu>
         )
     }

@@ -3,6 +3,7 @@ import { Button } from "antd";
 
 import Module from "../../lib/module";
 import ModuleTitle from "../../components/moduleTitle"
+import ModuleBreadcrumb from "../../components/moduleBreadcrumb"
 
 
 class ActivityLists extends Module {
@@ -14,7 +15,7 @@ class ActivityLists extends Module {
     }
 
     componentDidMount() {
-        
+
     }
 
 
@@ -22,6 +23,7 @@ class ActivityLists extends Module {
     render() {
         return (
             <div className="activity-lists">
+                <ModuleBreadcrumb></ModuleBreadcrumb>
                 <ModuleTitle/>
 
             </div>

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Button } from "antd";
 
 import Module from "../../lib/module";
+import ModuleBreadcrumb from "../../components/moduleBreadcrumb"
 
 class CreateActivity extends Module {
     constructor(props) {
@@ -31,7 +32,7 @@ class CreateActivity extends Module {
         // console.log("render")
         return (
             <div className="">
-                create
+                <ModuleBreadcrumb></ModuleBreadcrumb>
             </div>
         )
     }
