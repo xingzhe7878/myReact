@@ -1,25 +1,47 @@
 import React, { Component, PropTypes } from 'react';
+import { Layout, Icon } from "antd";
 
 import Module from "../lib/module";
-import AppNav from "../components/nav"
+import LeftMenu from "../components/leftMenu"
+
+const { Header, Footer, Sider, Content } = Layout;
+
 
 class App extends Module {
     constructor(props) {
         super(props);
+        this.state= {
+            autoHeight: null
+        }
     }
 
     componentDidMount() {
+        this.getAutoHeight();
+    }
 
+    //计算高度
+    getAutoHeight() {
+        let h = document.documentElement.clientHeight || document.body.clientHeight;
+        this.setState({
+            autoHeight: h
+        });
     }
 
     render() {
+        let state = this.state;
         return (
-            <div className="J_app_main">
-                <AppNav></AppNav>
-                <div className="J_app_container">
-                    {this.props.children}
-                </div>
-            </div>
+            <Layout style={{"minHeight":state.autoHeight}}>
+                <Header>Header</Header>
+                <Layout>
+                    <Sider>
+                        <LeftMenu/>
+                    </Sider>
+                    <Content>
+                        {this.props.children}
+                    </Content>
+                </Layout>
+                <Footer>Footer</Footer>
+            </Layout>
 
         )
     }

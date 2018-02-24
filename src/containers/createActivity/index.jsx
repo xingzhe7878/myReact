@@ -3,7 +3,7 @@ import { Button } from "antd";
 
 import Module from "../../lib/module";
 
-class PageA extends Module {
+class CreateActivity extends Module {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,26 +12,26 @@ class PageA extends Module {
     }
 
     componentWillMount() {
-        console.log("componentWillMount");
+        // console.log("componentWillMount");
     }
 
     componentDidMount() {
-        console.log("componentDidMount");
+        // console.log("componentDidMount");
     }
 
     componentWillUpdate() {
-        console.log("componentWillUpdate");
+        // console.log("componentWillUpdate");
     }
 
     componentDidUpdate() {
-        console.log("componentDidUpdate");
+        // console.log("componentDidUpdate");
     }
 
     render() {
-        console.log("render")
+        // console.log("render")
         return (
             <div className="">
-                <Button type="primary">primary</Button>
+                create
             </div>
         )
     }
@@ -39,4 +39,4 @@ class PageA extends Module {
 
 }
 
-export default PageA;
+export default CreateActivity;

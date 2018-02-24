@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Module from "../../lib/module";
 
-class PageB extends Module {
+class Home extends Module {
     constructor(props) {
         super(props);
     }
@@ -14,10 +14,10 @@ class PageB extends Module {
     render() {
         return (
             <div className="">
-                pageB
+                Home
             </div>
         )
     }
 }
 
-export default PageB;
+export default Home;
